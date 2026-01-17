@@ -1,0 +1,110 @@
+/* 01-html-semantics/styles.css */
+:root {
+  --max: 1100px;
+  --radius: 14px;
+  --pad: 16px;
+  --border: 2px dashed rgba(255,255,255,.25);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0b0f17;
+  color: #e8eefc;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+}
+.skip-link:focus { left: 12px; }
+
+.box {
+  border: var(--border);
+  border-radius: var(--radius);
+  margin: 14px;
+  background: rgba(255,255,255,.04);
+}
+
+.nav { margin-top: 12px; }
+
+.nav-inner {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #e8eefc;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.18);
+}
+.nav a:focus,
+.nav a:hover {
+  outline: none;
+  background: rgba(255,255,255,.10);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 14px;
+}
+
+.card {
+  border-radius: var(--radius);
+  padding: var(--pad);
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.05);
+}
+
+.muted { opacity: .85; }
+
+.sidebar .box { margin: 0 0 14px 0; }
+
+.checklist { padding-left: 18px; }
+
+code {
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.08);
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+label { font-weight: 600; }
+
+input, select, button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(0,0,0,.25);
+  color

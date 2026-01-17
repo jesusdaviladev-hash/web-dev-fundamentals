@@ -1,0 +1,164 @@
+<!-- 01-html-semantics/examples.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semantic HTML Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="box" aria-label="Page header">
+    <div class="container">
+      <h1>Semantic HTML Showcase</h1>
+      <p>
+        Semantic HTML gives meaning to your content, improves accessibility and SEO,
+        and makes code easier to maintain.
+      </p>
+    </div>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="container nav-inner">
+        <a href="#elements">Elements</a>
+        <a href="#accessibility">Accessibility</a>
+        <a href="#mistakes">Common Mistakes</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="box" aria-label="Main content">
+    <div class="container layout">
+      <section id="elements" class="box" aria-label="Core semantic elements">
+        <h2>Core Semantic Elements</h2>
+        <p class="muted">Each card explains what the element is for and where it belongs.</p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>&lt;header&gt;</h3>
+            <ul>
+              <li>Intro content (logo/title)</li>
+              <li>Can appear inside sections/articles</li>
+              <li>Often paired with navigation</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>&lt;nav&gt;</h3>
+            <ul>
+              <li>Primary navigation links</li>
+              <li>Not for every link list</li>
+              <li>Should be keyboard-friendly</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>&lt;main&gt;</h3>
+            <ul>
+              <li>Main content of the page</li>
+              <li>Only one per page</li>
+              <li>Skip link should land here</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>&lt;section&gt;</h3>
+            <ul>
+              <li>Groups related content by theme</li>
+              <li>Usually has a heading</li>
+              <li>Helps page structure</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>&lt;article&gt;</h3>
+            <ul>
+              <li>Self-contained content</li>
+              <li>Blog post, card, news item</li>
+              <li>Can stand alone</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>&lt;aside&gt;</h3>
+            <ul>
+              <li>Secondary/related content</li>
+              <li>Sidebar, tips, related links</li>
+              <li>Not the main story</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>&lt;footer&gt;</h3>
+            <ul>
+              <li>Footer for page or section</li>
+              <li>Metadata, links, copyright</li>
+              <li>Can appear more than once</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Form Example (Labels)</h3>
+            <form>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="field">
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic" required>
+                  <option value="">Select an option</option>
+                  <option value="semantics">Semantics</option>
+                  <option value="accessibility">Accessibility</option>
+                </select>
+              </div>
+
+              <button type="submit">Submit</button>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <aside class="box sidebar" aria-label="Sidebar notes">
+        <section id="accessibility" class="box">
+          <h2>Accessibility Essentials</h2>
+          <ul class="checklist">
+            <li>Use <code>&lt;label for&gt;</code> with inputs</li>
+            <li>Meaningful <code>alt</code> text for images</li>
+            <li>Logical headings (h1 → h2 → h3)</li>
+            <li>Keyboard navigation works</li>
+          </ul>
+        </section>
+
+        <section id="mistakes" class="box">
+          <h2>Common Mistakes</h2>
+          <ul class="checklist">
+            <li>Overusing <code>&lt;div&gt;</code> instead of semantic tags</li>
+            <li>Using multiple <code>&lt;main&gt;</code> elements</li>
+            <li>Skipping heading levels</li>
+            <li>Missing labels on form inputs</li>
+          </ul>
+        </section>
+
+        <section class="box">
+          <h2>Key Takeaways</h2>
+          <ul class="checklist">
+            <li>Semantics improves usability and clarity</li>
+            <li>Screen readers rely on structure</li>
+            <li>Maintainable code starts with good HTML</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="box" aria-label="Page footer">
+    <div class="container">
+      <p>Built as a fundamentals refresher project. Updated as I learn.</p>
+    </div>
+  </footer>
+</body>
+</html>
